@@ -1,9 +1,131 @@
 body {
-  text-align: center;
   margin: 0;
-  padding: 0;
-  background-color: #1a73e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ebd6d6;
 }
-h1 {
-  color: #f4b400;
+
+#game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 850px;
+}
+
+#status {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#status h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+#timer {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+#status p {
+  font-size: 10px;
+}
+
+#game-board {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  border: 2px solid black;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+#finish-line {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: black;
+}
+
+#player,
+#game-master {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#player {
+  width: 50px;
+  height: 50px;
+  background-image: url("player.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 90%;
+  left: 5%;
+  border: none;
+}
+
+#game-master {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("game-master.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  border: none;
+}
+
+.obstacle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url("obstacle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+#controls {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.control-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.control-btn:active {
+  background-color: #555;
+}
+
+.bullet {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("bullet.png");
+  background-size: cover;
+  border-radius: 50%;
+  transform: rotate(180deg);
 }

@@ -4,12 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>Hello World</title>
+    <title>Red Light Green Light Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello World</h1>
-    <p>My Game Website</p>
+    <div id="game">
+      <div id="status">
+        <h1>
+          Red Light Green Light - Cross the finish line to win. Cross during
+          green light to avoid being shot!
+        </h1>
+
+        <span id="timer">Time: 30</span>
+      </div>
+      <div id="game-board">
+        <div id="player"></div>
+        <div id="game-master"></div>
+        <div id="finish-line"></div>
+        <div id="controls">
+          <button id="up" class="control-btn">▲</button>
+          <div>
+            <button id="left" class="control-btn">◀</button>
+            <button id="down" class="control-btn">▼</button>
+            <button id="right" class="control-btn">▶</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
