@@ -4,39 +4,37 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   background-color: #ebd6d6;
+  overflow: hidden;
 }
 
 #game {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 850px;
+  width: 90vw;
 }
 
 #status {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1vh;
 }
 
 #status h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 3vw;
 }
 
 #timer {
-  font-size: 15px;
-  margin-top: 5px;
-}
-
-#status p {
-  font-size: 10px;
+  font-size: 2vw;
+  margin-top: 0.5vh;
 }
 
 #game-board {
   position: relative;
-  width: 800px;
-  height: 600px;
+  width: 90vw;
+  height: 70vh;
   border: 2px solid black;
   background-color: #f0f0f0;
   overflow: hidden;
@@ -47,21 +45,19 @@ body {
   top: 5%;
   left: 0;
   width: 100%;
-  height: 5px;
+  height: 1vh;
   background-color: black;
 }
 
 #player,
 #game-master {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 6vw;
+  height: 6vw;
   border-radius: 50%;
 }
 
 #player {
-  width: 50px;
-  height: 50px;
   background-image: url("player.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -72,9 +68,8 @@ body {
 }
 
 #game-master {
-  position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 4vw;
+  height: 4vw;
   background-image: url("game-master.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -87,8 +82,8 @@ body {
 
 .obstacle {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 5vw;
+  height: 5vw;
   background-image: url("obstacle.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -98,7 +93,7 @@ body {
 
 #controls {
   position: absolute;
-  bottom: 10px;
+  bottom: 1vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -109,9 +104,9 @@ body {
   background-color: #333;
   color: white;
   border: none;
-  padding: 10px;
-  margin: 5px;
-  font-size: 18px;
+  padding: 1.5vh;
+  margin: 0.5vh;
+  font-size: 2.5vw;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -122,10 +117,20 @@ body {
 
 .bullet {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 2.5vw;
+  height: 2.5vw;
   background-image: url("bullet.png");
   background-size: cover;
   border-radius: 50%;
   transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+  #game {
+    width: 95vw;
+  }
+
+  #game-board {
+    height: 60vh;
+  }
 }
