@@ -6,7 +6,7 @@ const finishLine = document.getElementById("finish-line");
 
 let playerPosition = { top: 90, left: 10 };
 let isGreenLight = true;
-let timeLeft = 60;
+let timeLeft = 30;
 let lightInterval;
 let timer;
 let shootingInterval;
@@ -300,7 +300,7 @@ function resetGame() {
   clearInterval(lightInterval);
   clearInterval(timer);
   clearInterval(shootingInterval);
-  timeLeft = 60;
+  timeLeft = 30;
   isGreenLight = true;
   shootingInterval = null;
 
